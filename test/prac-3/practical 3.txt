@@ -1,0 +1,24 @@
+practicle 3
+
+su 
+rpm -q samba
+rpm -qa samba
+rpm -qc samba
+rpm -qd samba
+rpm -ql samba
+rpm -q --scripts samba
+
+EXTRACTING FILES FROM RPM
+
+su
+yum install rpm-build
+yum repolist all
+cd /etc/yum.repo.d
+
+configuring and manageing storage
+
+step 1 attach pen drive
+fdisk-l 
+fdisk-l /dev/sda1
+press m for manual
+press n to add new partiton

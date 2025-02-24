@@ -1,0 +1,23 @@
+PRACTICLE 1
+
+pwd
+cd
+cd~
+cd..
+cd-L
+man ls
+ls
+ls~l
+touch abc.txt
+cat>abc.txt
+cat>>abc.txt
+cat abc.txt
+cat abc.txt pqr.txt
+cat-N pqr.txt ,cat-B,cat-S,cat-E
+gedit pqr.txt
+mkdir tyitb
+tac pqr.txt
+head/tail pqr.txt
+ps
+top
+kill 27743

@@ -1,0 +1,41 @@
+practical 4
+
+work with group user and permission
+
+su
+cd
+useradd vinyaa
+passwd vinyaa
+id vinyaa
+cat /etc/default/useradd
+passwd -l vinyaa
+passwd -u vinyaa
+passwd -s vinyaa
+passwd -e vinyaa
+usermod -u 555 vinyaa
+id vinyaa
+
+usermod -g 0 TIGER
+id TIGER
+
+userdel vinyaa
+id vinyaa
+
+cat /etc/group
+
+permissions:
+
+mkdir tyit
+chmod 777 tyit
+cd tyit
+touch file1 file2
+ls
+
+chmod 744 file1
+ls -li
+
+chmod u+x file2
+ls -li
+
+chmod o+x,o+w file2
+ls -li 

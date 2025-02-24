@@ -1,0 +1,83 @@
+practical 2
+
+su 
+df
+mkdir /mnt/test1
+mount -t vfat /dev/sbd1 /mnt/test1
+cd /mnt/test1
+ls
+
+LINKS:-SOFT_LINKS
+
+mkdir vinayak
+cd vinayak
+cat > test123
+ls
+ls-li
+ln -s test123 mytest123
+ls
+ls -li
+cat mytest123
+ls
+ls -li
+ln -s test123 mytest123
+ls
+mv test123 mytest123
+ls -li
+
+LINKS:-HARD_LINKS
+
+ln test123 hardtest
+ls -li
+ln test123 hardlink1
+ls -li
+rm test123
+ls -li
+cat test123
+cat hardtest
+
+MAKING A BACKUP:-
+
+tar -cvf /temp/etc.tar /etc/
+
+pwd
+cd /temp/
+ls
+
+tar -tvf /temp/etc.tar
+
+tar -xvf /temp/etc.tar
+
+CREATING REPO
+
+su (go in root)
+mount
+mount -o loop /dev/sr0 /mnt
+cd /mnt
+ls
+cd
+mkdir /rhel.8.3_dvd
+cd /mnt
+cp -avr * /rhel.8.3_dvd/
+cd
+cd /rhel.8.3_dvd
+ls
+cd
+cd /etc/yum.repos.d/
+ls
+mv redhat.repo /temp/
+ls
+cat /etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+vim rhel_8.0.repo
+
+#BaseOS
+[Rhel_8.0_BaseOS]
+name=Rhel_8.0 BaseOS
+baseurl=file:///rhel.8.3_dvd/BaseOS
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+
+yum clean all
+
+
